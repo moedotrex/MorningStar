@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
 	public float saltoTime;
 	private bool isJumping;
 
+	B34AnimationController b34AnimationController;
+
 
 	CharacterController characterController;
 
@@ -98,7 +100,8 @@ public class PlayerController : MonoBehaviour
 
 			Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 			characterController.Move(moveDir.normalized * vel * Time.deltaTime);
-        }
+
+		}
 
 
 
