@@ -19,21 +19,14 @@ public class B34AnimationController : MonoBehaviour
         b34Animator.SetBool("IsWalking", isWalking);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    public void SetForwardSpeedParameter(float forwardSpeed)
     {
-        //bool IsWalking = b34Animator.GetBool("IsWalking");
-        bool forwardPressed = Input.GetKey("w");
-
-        if (forwardPressed)
-        {
-            b34Animator.SetBool("IsWalking", true);
-        }
-
-        if (!forwardPressed)
-        {
-            b34Animator.SetBool("IsWalking", false);
-        }
+        b34Animator.SetFloat("ForwardSpeed", forwardSpeed);
     }
+
+    public void JumpTrigger()
+    {
+        b34Animator.SetTrigger("JumpTrigger");
+    }
+
 }

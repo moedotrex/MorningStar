@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 	float velRotacion;
 
 	private float vel;
+	bool isMoving;
 
 	public Transform cam;
 
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
 	public float saltoTime;
 	private bool isJumping;
 
+
+	[HideInInspector] public Vector3 moveDir;
+
+
 	B34AnimationController b34AnimationController;
 
 
@@ -38,6 +43,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
 		characterController = GetComponent<CharacterController>();
+		b34AnimationController = GetComponentInChildren<B34AnimationController>();
 
 
 	}
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
 			isJumping = true;
 			saltoTimeCounter = saltoTime;
 			velocidad.y = Mathf.Sqrt(Salto * -2f * gravedad);
+			b34AnimationController.JumpTrigger();
 		}
 
 		if (Input.GetButton("Jump") && isJumping == true)
@@ -69,7 +76,7 @@ public class PlayerController : MonoBehaviour
             {
 				velocidad.y = Mathf.Sqrt(Salto * -2f * gravedad);
 				saltoTimeCounter -= Time.deltaTime;
-            }
+			}
             else
             {
 				isJumping = false;
@@ -98,9 +105,20 @@ public class PlayerController : MonoBehaviour
 			transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
 
-			Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+			moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 			characterController.Move(moveDir.normalized * vel * Time.deltaTime);
+			isMoving = true;
 
+			b34AnimationController.SetForwardSpeedParameter(1f);
+			//b34AnimationController.IsWalking(true);
+
+		}
+
+		if (direction.magnitude <= 0f)
+		{
+			isMoving = false;
+			b34AnimationController.SetForwardSpeedParameter(0f);
+			//b34AnimationController.IsWalking(false);
 		}
 
 
