@@ -5,7 +5,7 @@ using UnityEngine;
 public class B34AnimationController : MonoBehaviour
 {
     Animator b34Animator;
-    PlayerController b34Movement;
+    B34PlayerController b34Movement;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +27,11 @@ public class B34AnimationController : MonoBehaviour
     public void JumpTrigger()
     {
         b34Animator.SetTrigger("JumpTrigger");
+    }
+
+    public void StopTrigger()
+    {
+        b34Animator.SetTrigger("Stop");
     }
 
 }

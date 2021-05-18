@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class A27PlayerController : MonoBehaviour
 {
 
 
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		characterController = GetComponent<CharacterController>();
+		characterController = GetComponentInChildren<CharacterController>();
 		b34AnimationController = GetComponentInChildren<B34AnimationController>();
 
 
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour
 			characterController.Move(moveDir.normalized * vel * Time.deltaTime);
 			isMoving = true;
 
-			b34AnimationController.SetForwardSpeedParameter(1f);
+			//b34AnimationController.SetForwardSpeedParameter(1f);
 			//b34AnimationController.IsWalking(true);
 
 		}
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
 		if (direction.magnitude <= 0f)
 		{
 			isMoving = false;
-			b34AnimationController.SetForwardSpeedParameter(0f);
+			//b34AnimationController.SetForwardSpeedParameter(0f);
 			//b34AnimationController.IsWalking(false);
 		}
 
