@@ -2407,6 +2407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BreakableWallWhole_Lowpoly
       objectReference: {fileID: 0}
+    - target: {fileID: 6092979178728824824, guid: 05212caddd1d38b4588d4137c11411b9, type: 3}
+      propertyPath: m_TagString
+      value: Destructible
+      objectReference: {fileID: 0}
     - target: {fileID: 6363574823493739157, guid: 05212caddd1d38b4588d4137c11411b9, type: 3}
       propertyPath: destroyedVersion
       value: 
