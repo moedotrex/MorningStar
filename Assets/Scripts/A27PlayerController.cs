@@ -32,7 +32,7 @@ public class A27PlayerController : MonoBehaviour
 	[HideInInspector] public Vector3 moveDir;
 
 
-	B34AnimationController b34AnimationController;
+	A27AnimationController a27AnimationController;
 
 
 	CharacterController characterController;
@@ -43,7 +43,7 @@ public class A27PlayerController : MonoBehaviour
 	void Start()
 	{
 		characterController = GetComponentInChildren<CharacterController>();
-		b34AnimationController = GetComponentInChildren<B34AnimationController>();
+		a27AnimationController = GetComponentInChildren<A27AnimationController>();
 
 
 	}
@@ -66,7 +66,7 @@ public class A27PlayerController : MonoBehaviour
 			isJumping = true;
 			saltoTimeCounter = saltoTime;
 			velocidad.y = Mathf.Sqrt(Salto * -2f * gravedad);
-			b34AnimationController.JumpTrigger();
+			//a27AnimationController.JumpTrigger();
 		}
 
 		if (Input.GetButton("Jump") && isJumping == true)
@@ -109,16 +109,16 @@ public class A27PlayerController : MonoBehaviour
 			characterController.Move(moveDir.normalized * vel * Time.deltaTime);
 			isMoving = true;
 
-			//b34AnimationController.SetForwardSpeedParameter(1f);
-			//b34AnimationController.IsWalking(true);
+			a27AnimationController.SetForwardSpeedParameter(1f);
+			//a27AnimationController.IsWalking(true);
 
 		}
 
 		if (direction.magnitude <= 0f)
 		{
 			isMoving = false;
-			//b34AnimationController.SetForwardSpeedParameter(0f);
-			//b34AnimationController.IsWalking(false);
+			a27AnimationController.SetForwardSpeedParameter(0f);
+			//a27AnimationController.IsWalking(false);
 		}
 
 

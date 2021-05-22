@@ -26,50 +26,31 @@ public class SetDestination : MonoBehaviour
     void Update()
     {
 
-        current = GameObject.FindWithTag(player2.tag);
+        //current = GameObject.FindWithTag(player2.tag);
 
         player2.SetDestination(player1.position);
 
-        distX = Mathf.Abs(player2.transform.position.x - player1.position.x);
+        /*distX = Mathf.Abs(player2.transform.position.x - player1.position.x);
         distZ = Mathf.Abs(player2.transform.position.z - player1.position.z);
 
+        Debug.Log("X: " + distX + "Y_ " + distZ);
 
-            if (!walkingEnabled)
+        if (distX > 0.5 && distZ > 0.5)
+        {
+            if (currentTag == "Player")
             {
-                //Debug.Log("I'm inside the walking but haven't told code to walk");
-                if (distX > 1 || distZ > 1)
-                {
-                    if (currentTag == "Player")
-                    {
-                        current.GetComponent<B34AnimationController>().IsWalking(true);
-                   //Debug.Log("started walk");
-                }
-                else
-                    {
-                        //current.GetComponent<A27AnimationController>().IsWalking(true);
-                    }
-
-                    walkingEnabled = true;
-                }
+                current.GetComponent<B34AnimationController>().SetForwardSpeedParameter(1f);
             }
 
-            else
-            {
-            //Debug.Log("I'm never here am I?");
-            if (distX < 1 && distZ < 1)
-                {
-                    if (currentTag == "Player")
-                    {
-                        current.GetComponent<B34AnimationController>().StopTrigger();
-                    //Debug.Log("stopped walk");
-                }
-                else
-                    {
-                        //current.GetComponent<A27AnimationController>().IsWalking(false);
-                    }
+        }
 
-                    walkingEnabled = false;
-                }
+        else
+        {
+            if (currentTag == "Player")
+            {
+                current.GetComponent<B34AnimationController>().SetForwardSpeedParameter(0f);
             }
+
+        }*/
     }
 }

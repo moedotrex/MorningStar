@@ -19,7 +19,7 @@ public class A27AnimationController : MonoBehaviour
         a27Animator.SetBool("IsWalking", isWalking);
     }
 
-    /*public void SetForwardSpeedParameter(float forwardSpeed)
+    public void SetForwardSpeedParameter(float forwardSpeed)
     {
         a27Animator.SetFloat("ForwardSpeed", forwardSpeed);
     }
@@ -27,6 +27,6 @@ public class A27AnimationController : MonoBehaviour
     public void JumpTrigger()
     {
         a27Animator.SetTrigger("JumpTrigger");
-    }*/
+    }
 
 }
