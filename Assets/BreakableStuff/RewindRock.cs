@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class RewindRock : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
+    GameObject rock;
 
     // Update is called once per frame
-    void Update()
+    void RewindEvent()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            this.GetComponent<RockAnimationController>().RebuildTrigger();
-        }
+        rock = GameObject.FindGameObjectWithTag("Rock");
+        rock.GetComponent<RockAnimationController>().RebuildTrigger();
     }
 }

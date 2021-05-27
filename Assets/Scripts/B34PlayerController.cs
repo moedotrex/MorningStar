@@ -121,5 +121,10 @@ public class B34PlayerController : MonoBehaviour
 			//b34AnimationController.IsWalking(false);
 		}
 
+		if (Input.GetMouseButtonDown(0))
+		{
+			b34AnimationController.ShootTrigger();
+		}
+
 	}
 }

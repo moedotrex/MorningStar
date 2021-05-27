@@ -34,4 +34,9 @@ public class B34AnimationController : MonoBehaviour
         b34Animator.SetTrigger("Stop");
     }
 
+    public void ShootTrigger()
+    {
+        b34Animator.SetTrigger("ShootTrigger");
+    }
+
 }
