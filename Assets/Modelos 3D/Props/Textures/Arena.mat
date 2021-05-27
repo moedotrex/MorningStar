@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: fe3293834e790e34f84407975723ffce, type: 3}
+        m_Texture: {fileID: 2800000, guid: 587898c3cc50e20429e6f741c9e75f62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -46,11 +46,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: fe3293834e790e34f84407975723ffce, type: 3}
+        m_Texture: {fileID: 2800000, guid: 587898c3cc50e20429e6f741c9e75f62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 2f7ab96b51b515643a594316a46bf3c5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 587898c3cc50e20429e6f741c9e75f62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -82,7 +82,7 @@ Material:
     - _ReceiveShadows: 0
     - _RimAmount: 0.7
     - _RimThreshold: 0.1
-    - _Smoothness: 0.424
+    - _Smoothness: 0.188
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
