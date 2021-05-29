@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RewindRock : MonoBehaviour
 {
-
+    public ParticleSystem muzzle, beam, particles;
     GameObject rock;
 
     // Update is called once per frame
@@ -12,5 +12,10 @@ public class RewindRock : MonoBehaviour
     {
         rock = GameObject.FindGameObjectWithTag("Rock");
         rock.GetComponent<RockAnimationController>().RebuildTrigger();
+
+        muzzle.Play();
+        beam.Play();
+        particles.Play();
+
     }
 }
